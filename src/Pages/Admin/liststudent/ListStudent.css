@@ -1,0 +1,287 @@
+/* General Page Styles */
+.student-list-wrapper {
+    background-color: rgba(0, 0, 0, 0.05); /* Transparent background */
+    height: 100vh; /* Full-page height */
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Heading Styles */
+h1 {
+    text-align: center;
+    font-size: 30px;
+    color: rgb(7, 7, 7);
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Table Styles */
+.student-table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.student-table th, .student-table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd; /* Table border */
+    font-size: 14px;
+}
+
+.student-table th {
+    border-radius: 5px;
+    background-color: #46a5d1;
+    font-weight: bold;
+}
+
+.student-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Action Buttons */
+.action-buttons button {
+    padding: 0px 30px 0px 20px;
+    margin: 10px 5px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Edit Button */
+.edit-button {
+    background-color: #ffcc00;
+    color: white;
+}
+
+.edit-button:hover {
+    background-color: #e6b800;
+}
+
+/* Delete Button */
+.delete-button {
+    background-color: #ff4d4d;
+    color: white;
+}
+
+.delete-button:hover {
+    background-color: #e60000;
+}
+
+/* Update and Cancel Button Styles */
+.update-button {
+    background-color: #28a745;
+    color: white;
+}
+
+.update-button:hover {
+    background-color: #218838;
+}
+
+.cancel-button {
+    background-color: #6c757d;
+    color: white;
+}
+
+.cancel-button:hover {
+    background-color: #5a6268;
+}
+
+/* Input Field Styles */
+input[type="text"],
+input[type="number"],
+input[type="date"] {
+    padding: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+/* Toaster */
+.custom-toast {
+    background-color: #007BFF;
+    color: white;
+}
+.no-data-message {
+    text-align: center;
+    font-size: 18px;
+    color: #666;
+    margin-top: 20px;
+}
+/* General Page Styles */
+.student-list-wrapper {
+    background-color: rgba(0, 0, 0, 0.05); /* Transparent background */
+    min-height: 100vh; /* Ensures it covers full page */
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Heading Styles */
+h1 {
+    text-align: center;
+    font-size: 26px;
+    color: rgb(7, 7, 7);
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Table Styles */
+.student-table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+}
+
+/* Table Headers & Cells */
+.student-table th, .student-table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.student-table th {
+    background-color: #46a5d1;
+    font-weight: bold;
+    color: white;
+}
+
+.student-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Responsive Table Scroll */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+}
+
+.action-buttons button {
+    padding: 8px 15px;
+    font-size: 12px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Edit Button */
+.edit-button {
+    background-color: #ffcc00;
+    color: white;
+}
+
+.edit-button:hover {
+    background-color: #e6b800;
+}
+
+/* Delete Button */
+.delete-button {
+    background-color: #ff4d4d;
+    color: white;
+}
+
+.delete-button:hover {
+    background-color: #e60000;
+}
+
+/* Update and Cancel Button Styles */
+.update-button {
+    background-color: #28a745;
+    color: white;
+}
+
+.update-button:hover {
+    background-color: #218838;
+}
+
+.cancel-button {
+    background-color: #6c757d;
+    color: white;
+}
+
+.cancel-button:hover {
+    background-color: #5a6268;
+}
+
+/* Input Field Styles */
+input[type="text"],
+input[type="number"],
+input[type="date"] {
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+/* Toaster */
+.custom-toast {
+    background-color: #007BFF;
+    color: white;
+}
+
+/* No Data Message */
+.no-data-message {
+    text-align: center;
+    font-size: 16px;
+    color: #666;
+    margin-top: 20px;
+}
+
+/* 🌟 Mobile Responsive Styles for 480px */
+@media (max-width: 480px) {
+    .student-list-wrapper {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+
+    /* Centering table & making it scrollable */
+    .table-container {
+        width: 95%; /* Adjusted width to fit within screen */
+        max-width: 480px; /* Prevents overflow */
+    }
+
+    .student-table {
+        font-size: 12px; /* Reduce font size for better mobile display */
+    }
+
+    .student-table th, .student-table td {
+        padding: 8px;
+    }
+
+    /* Adjust action buttons */
+    .action-buttons {
+        flex-direction: column;
+        gap: 3px;
+    }
+
+    .action-buttons button {
+        width: 100%;
+        font-size: 12px;
+    }
+
+    /* Adjust input fields */
+    input[type="text"],
+    input[type="number"],
+    input[type="date"] {
+        padding: 6px;
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,289 @@
+/* General Container Styling */
+
+
+.container-fluid.homepage {
+    height: 100vh; /* Full screen height */
+    background:whitesmoke;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0 20px; /* Add padding for smaller screens */
+    flex-direction: row; /* Default layout: side by side */
+}
+h1 strong {
+    background-image: linear-gradient(to right, #1791c8, #1791c8 );
+    -webkit-background-clip: text;
+    background-clip: text; /* Non-webkit browsers */
+    -webkit-text-fill-color: transparent; /* Webkit browsers */
+    color: transparent; /* For older browsers */
+  }
+  
+
+/* Navbar Styling */
+.nav img {
+    padding-left: 50px;
+    cursor: pointer;
+}
+.nav
+{
+    background-color: #0066ff;
+    background: transparent;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; 
+    display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  /* background-color: rgb(245, 241, 241); Default background color */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+
+}
+
+
+/* Right Column: Content Box */
+.content-box {
+    height: 100vh;
+    padding: 100px;
+    text-align: center;
+    /* backdrop-filter: blur(10px); */
+}
+
+.title {
+    font-family: "Josefin Sans", serif;
+    font-weight: bold;
+    font-size: 55px;
+    line-height: 1.1;
+    color: black;
+}
+
+.description {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.button .bttn {
+    padding: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 10px;
+    background-color:#1791c8;
+    color: white;
+    border: 1px solid #0066ff;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    margin-right: 50px;
+    text-decoration: none;
+}
+
+.button .bttn:hover {
+    background-color: #0066ff;
+    color: #0c0c0c;
+    border: 1px solid #ffffff;
+}
+
+/* Play Store Badge */
+.playstore {
+    display: flex;
+    justify-content: center;
+}
+
+.playstore-badge {
+    width: 130px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.playstore-badge:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .container-fluid.homepage {
+        flex-direction: column; /* Stack content vertically */
+    }
+
+    .content-box {
+        order: 1; /* Ensure content box appears at the top */
+        padding: 20px 10px; /* Adjust padding for smaller screens */
+    }
+
+    .carousel {
+        margin-top: 100px;
+        order: 2; /* Ensure carousel appears below the content box */
+        max-width: 100%; /* Full width on mobile */
+        max-height: 200px; /* Adjust height for smaller screens */
+    }
+
+    .carousel .carousel-item img {
+        
+        height: auto; /* Adjust image height dynamically */
+    }
+
+    .title {
+        margin-top: 60px;
+        font-size: 2rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+
+    .button-group .btn {
+        font-size: 1rem;
+        padding: 6px 8px;
+    }
+
+    .playstore-badge {
+        width: 100px;
+    }
+}
+@media (max-width: 576px) {
+    /* General Container Styling */
+    .container-fluid.homepage {
+        height: auto; /* Remove full height to allow scrolling */
+        padding: 10px; /* Add more padding for smaller screens */
+        flex-direction: column; /* Stack content vertically */
+    }
+
+    /* Navbar Styling */
+    .navbar img {
+        padding-left: 30px; /* Adjust for smaller screens */
+        height: 50px; /* Adjust logo size */
+        margin-bottom: 20px; /* Add some space below the logo */
+    }
+
+    /* Carousel */
+    .carousel {
+        max-width: 100%; /* Full width */
+        max-height: 200px; /* Adjust height for smaller screens */
+        margin-top: 50px;
+    }
+
+    .carousel .carousel-item img {
+        width: 100%;
+        height: auto; /* Adjust image height dynamically */
+    }
+
+    /* Content Box */
+    .content-box {
+        padding: 30px 20px; /* Adjust padding for smaller screens */
+        text-align: center;
+        backdrop-filter: blur(10px);
+    }
+
+    .title {
+        font-size: 1.5rem; /* Smaller font size */
+        line-height: 1.2;
+    }
+
+    .description {
+        font-size: 0.9rem; /* Adjust description font size */
+    }
+
+    /* Button Styling */
+    .button-group .button {
+        font-size: 0.9rem; /* Slightly smaller button font */
+        padding: 6px 10px;
+        max-width: 80px; /* Adjust button width */
+        margin-right: 30px; /* Reduce margin */
+    }
+
+    /* Playstore Badge */
+    .playstore-badge {
+        width: 120px; /* Adjust width for smaller devices */
+    }
+}
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .container-fluid.homepage {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .content-box {
+        padding: 20px;
+        margin-right: 50%;
+    }
+
+    .carousel {
+        margin-top: 20px;
+        max-width: 100%;
+        max-height: 200px;
+    }
+
+    .carousel .carousel-item img {
+        height: auto;
+    }
+
+    .title {
+        font-size: 1.8rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+
+    .button .bttn {
+        font-size: 1rem;
+        padding: 8px 10px;
+    }
+
+    .playstore-badge {
+        width: 100px;
+    }
+}
+
+/* Extra Small Devices */
+@media (max-width: 480px) {
+    .container-fluid.homepage {
+        padding: 20px;
+    }
+
+    .nav img {
+        height: 65px;
+        margin-left:-50px;
+    }
+
+    .carousel {
+        max-width: 100%;
+        max-height: 180px;
+        margin-top: 20px;
+    }
+
+    .content-box {
+        padding: 30px;
+       margin-right: 60%;
+    }
+
+    .title {
+        font-size: 1.5rem;
+        line-height: 1.2;
+    }
+
+    .description {
+        font-size: 0.9rem;
+    }
+    background
+    .button .bttn {
+        font-size: 0.9rem;
+        padding: 8px 10px;
+        width: 100%;
+    }
+
+    .playstore-badge {
+        width: 90px;
+        margin-bottom: 50px;
+    }
+}

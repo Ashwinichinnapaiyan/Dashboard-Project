@@ -1,0 +1,134 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Background */
+.login-container {
+  
+  display: flex;
+  align-items: center;
+  justify-content:space-around;
+  height: 100vh;
+  background: linear-gradient(135deg, #f4f4f5, #e3e4e9);
+  padding: 30px;
+  position: relative;
+}
+.form-login
+{
+  background-color: #d7dcdd;
+  
+}
+/* Login Box */
+.login-box {
+  background: transparent;
+  backdrop-filter: blur(15px);
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  width: 400px;
+  text-align: center;
+  color: #b41f1f;
+}
+
+/* Login Heading */
+.login-heading {
+  font-family:"serif";
+  font-size: 30px;
+  margin-bottom: 25px;
+  color: #0a0a0a;
+  font-weight: bold;
+}
+
+/* Input Fields */
+.input-group {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  color: #030303;
+  font-size: 14px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #050505;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+.input-group input:focus {
+  border-color: #4deaff;
+}
+
+
+/* Error Message */
+.error-message {
+  color: #ff4d6d;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* Login Button */
+.login-btn {
+  background: #087227;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.login-btn:hover {
+  background: #ff1e44;
+  transform: translateY(-2px);
+}
+
+/* Register & Back Links */
+.register-prompt
+{
+  color: black;
+}
+.register-prompt a, .back-link a {
+  color: #0e0d0d;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.register-prompt a:hover, .back-link a:hover {
+  color: #ff4d6d;
+}
+
+/* Image Box */
+.image-box img {
+  width: 100%;
+  border-radius: 10px;
+  /* margin-right: 10%; */
+}
+
+/* Responsive */
+@media screen and (max-width: 480px) {
+  .login-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .image-box {
+    display: none;
+  }
+}

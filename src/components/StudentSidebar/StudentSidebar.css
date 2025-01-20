@@ -1,0 +1,156 @@
+/* Sidebar Styles */
+.sidebar {
+  width: 100px;
+  border-right: 1px solid #e9e7e7;
+  box-shadow: 4px 0 6px rgba(0, 0, 0, 0.1);
+  height: 100vh;
+  padding-top: 100px;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for theme change */
+}
+
+/* Sidebar link styles */
+.navLink {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #7d7d7d; /* Default text color */
+  font-size: 12px; /* Adjust text size */
+  transition: color 0.3s ease;
+}
+
+/* Sidebar list styling */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+}
+
+/* List items */
+.sidebar ul li {
+  margin: 30px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Icon styling */
+.sidebar ul li .icon {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+/* Active link styles */
+.sidebar ul li.navActive {
+  color: #1791c8; /* Active text color */
+}
+
+/* Active icon color */
+.sidebar ul li.navActive .icon {
+  color: #1791c8; /* Icon color for active state */
+}
+
+/* Active link text color */
+.sidebar ul li.navActive a {
+  color: #1791c8; /* Active link text color */
+}
+
+/* Dark theme styles */
+body.dark .sidebar {
+  border-right: 1px solid #1a1919;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color:black; /* Dark sidebar background */
+  color: #fff; /* Dark theme text color */
+}
+
+body.dark .navLink {
+  color: #ccc; /* Light text for links in dark mode */
+}
+body.dark .navLink .icon {
+  color: #ccc; /* Light text for links in dark mode */
+}
+
+body.dark .sidebar ul li.navActive {
+  color: #1e90ff; /* Active color in dark mode */
+}
+
+body.dark .sidebar ul li.navActive .icon {
+  color: #1e90ff; /* Active icon color in dark mode */
+}
+
+body.dark .sidebar ul li.navActive a {
+  color: #1e90ff; /* Active link text color in dark mode */
+}
+
+/* Light theme styles */
+body.light .sidebar {
+  background-color: #f4f5f1; /* Light sidebar background */
+  color: #000; /* Light theme text color */
+}
+
+body.light .navLink {
+  color: #7d7d7d; /* Dark text for links in light mode */
+}
+
+body.light .sidebar ul li.navActive {
+  color: #1791c8; /* Active color in light mode */
+}
+
+body.light .sidebar ul li.navActive .icon {
+  color: #1791c8; /* Active icon color in light mode */
+}
+
+body.light .sidebar ul li.navActive a {
+  color: #1791c8; /* Active link text color in light mode */
+}
+
+
+/* ========== RESPONSIVE DESIGN ========== */
+@media (max-width: 480px) {
+ 
+  /* Sidebar - Move to Bottom */
+  .sidebar {
+    z-index: 1;
+    width: 100%;
+    height:100px;
+    padding-bottom: 50px;
+    position: fixed;
+    bottom: 0;
+    top: unset;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px 0;
+    border-top: 1px solid #e9e7e7;
+    background-color: #fff; /* Ensure background is white */
+  }
+
+  
+  /* Sidebar Links */
+  .sidebar ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .sidebar ul li {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .sidebar ul li .icon {
+    font-size: 24px;
+  }
+
+  .sidebar ul li a {
+    font-size: 12px;
+  }
+
+
+}

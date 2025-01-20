@@ -1,0 +1,149 @@
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  background-color: rgb(245, 241, 241); /* Default background color */
+  border-bottom: 1px solid #e9e7e7;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+
+/* Logo Styling */
+.logo {
+  max-height: 100%; /* Ensure logo height is flexible */
+  max-width: 100%; /* Ensure logo width is flexible */
+  height: 70px; /* Adjust logo height */
+  width: auto; /* Maintain aspect ratio */
+  padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for theme change */
+}
+
+/* Dark mode logo adjustment */
+.navbar.dark .logo {
+  filter: invert(1) sepia(1) saturate(5) hue-rotate(180deg);
+}
+
+
+/* Icon and Profile section styling */
+.icon-part {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+}
+
+.profile {
+  padding: 15px;
+  font-size: 25px;
+}
+
+.search {
+  padding: 15px;
+}
+
+/* Light Theme Styles */
+.navbar.light {
+  background-color: white;
+  color: black;
+}
+
+.navbar.light .theme-toggle {
+  color: black;
+}
+
+/* Dark Theme Styles */
+.navbar.dark {
+  background-color: #333;
+  color: white;
+  border-bottom: 1px solid #1a1919;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.dark .theme-toggle {
+  color: white;
+}
+/* src/components/Navbar/Navbar.css */
+
+/* Add styles for logout confirmation modal */
+.logout-confirmation {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  z-index: 1000;
+}
+
+.logout-confirmation button {
+  margin: 10px;
+  padding-left: 8px;
+  background-color: #4d59ff;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.logout-confirmation button:hover {
+  background-color: #00d7e6;
+}
+
+.logout-confirmation p {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+/* Add this to your Navbar.css */
+
+/* Style for the search bar */
+.search-bar {
+  margin-left: 0px;
+  padding: 5px;
+  font-size: 14px;
+  width: 170px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.search-bar:focus {
+  /* padding-left: 20px; */
+  outline: none;
+  border-color: #007bff;
+}
+
+.search-bar::placeholder {
+  color: #aaa;
+}
+
+
+
+/* Mobile Only (480px and Below) */
+@media screen and (max-width: 480px) {
+  .navbar img {
+    /* width: 50px; */
+    height: 80px;
+    padding-top: 20px;   
+  }
+  .logout-confirmation {
+    width: 90%;  /* Adjust width for small screens */
+    padding: 20px;  /* Reduce padding for smaller screens */
+  }
+
+  .logout-confirmation button {
+    width: 100%;  /* Make buttons take full width on smaller screens */
+    padding: 12px; /* Adjust padding for better touch interaction */
+  }
+
+  .logout-confirmation p {
+    font-size: 14px;  /* Slightly reduce the font size */
+  }
+}
+  
